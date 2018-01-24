@@ -1,10 +1,13 @@
 # 常用指令
 
 執行程式碼檔案
-<code>python [code.py]</code>
+<pre>python [coding.py]</pre>
 
-安裝套件
-<code>pip3 install [套件名稱]</code>
+安裝套件  
+<pre>pip3 install [套件名稱]</pre>
 
-查詢已安裝套件
-<code>pip3 list</code>
+安裝指定版本的套件
+<pre>pip3 install [套件名稱]==[版本號]</pre>
+
+查詢已安裝套件  
+<pre>pip3 list</pre>

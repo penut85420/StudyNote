@@ -11,3 +11,6 @@
 
 查詢已安裝套件  
 <pre>pip3 list</pre>
+
+啟動Jupyter Notebook
+<pre>jupyter notebook</pre>

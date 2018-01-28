@@ -8,6 +8,7 @@
 	- [Matplotlib](#matplotlib)
 	- [codecs](#codecs)
 	- [tkinter](#tkinter)
+	- [urllib](#urllib)
 - [**Plugin**](#plugin)
 	- [PyLint for VSCode](#pylint-for-vscode)
 - [**Third-Party**](#third-party)
@@ -32,6 +33,9 @@
 
 ## tkinter
 >GUI Application Developing
+
+## urllib
+>可以把中文轉成網址編碼
 
 # **Plugin**
 

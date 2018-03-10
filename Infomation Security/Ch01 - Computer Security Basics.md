@@ -8,9 +8,9 @@
 
 ## CIA Traid - 從使用者的角度
 + 機密性(Confidentiality)
-	+ 防止被未授權(Unauthorized)的使用者讀取(Reading)機密資訊
+	+ 防止被未授權(Unauthorized)的使用者**讀取**(Reading)機密資訊
 + 完整性(Integrity)
-	+ 防止被未授權的使用者修改(Writing)資訊
+	+ 防止被未授權的使用者**修改**(Writing)資訊
 + 可用性(Availability)
 	+ 授權的使用者可以正常的存取資料、使用服務
 
@@ -36,23 +36,23 @@
 ## 網路對安全的威脅 Threat to Security
 + 黑客 Hacker
 	+ 黑客原意為熟練的電腦使用人員
-	+ 現在是指企圖(Attempts)滲透(Penetrate)一個資訊系統安全的人，無論其意圖為何
+	+ 現在是指企圖(Attempts)滲透(Penetrate)一個資訊系統安全的人，**無論其意圖為何**
 + 惡意代碼物件 Malicious Code Object
 	+ 種類包含：
 		+ 病毒(Virus)
-			+ 無法獨立生存，寄生在其他檔案
+			+ 無法獨立生存，**寄生**在其他檔案，並在特定時機攻擊癱瘓電腦
 		+ 蠕蟲(Worm)
-			+ 會大量複製自己
+			+ 會大量**複製**自己
 		+ 後門(Backdoor)
-			+ 繞過系統安全性，從比較隱密的地方取得系統存取權
+			+ **繞過**系統安全性，從比較隱密的地方取得系統存取權
 			+ 特洛伊木馬(Trojan Horse)就是一種後門軟體，用以誤導使用者藉以騙取甚至遠端操作
 + 來自內部的惡意 Malicious Insider
-	+ 系統安全要從內部做起
+	+ 系統安全要從**內部**做起
 	+ 組織內部的人試圖超越他們合法擁有的權利(Right)和權限(Permissions)
 	+ 安全專家和系統管理員(Administrators)特別危險
 
 ## 風險分析 Risk Analysis
-+ 因為資源有限，所以無法採取所有保護措施
++ 因為**資源有限**，所以無法採取所有保護措施
 + 
 + 風險分析所涉及(Involved)的行動：
 	+ 決定有價值的資產(Assets)
@@ -89,9 +89,9 @@
 ![風險 = 威脅 + 漏洞](https://i.imgur.com/emYkYkD.png)
 
 ## 質的風險評估 Qualitative Risk Assessment
-+ 專心於分析資產的無形特性(Intangible Properties)而非金錢價值
++ 專心於分析資產的**無形**特性(Intangible Properties)而非金錢價值
 + 確定風險的優先級來協助分配安全資源
-+ 相對容易進行的評估方式
++ 相對容易進行的評估方式(?)
 
 ## 量的風險評估 Quantitative Risk Assessment
 + 根據資產價值、暴露風險的發生率以及資產的年度耗損做評估
@@ -122,7 +122,7 @@
 + Tradeoff 要考量的部分包含：
 	+ 安全性
 	+ 使用者便利(Convenience)
-		+ 使用者可能會因為系統安全過於累贅(Cumbersome)而降低使用意願(Willingness)
+		+ 使用者可能會因為系統安全過於**累贅**(Cumbersome)而降低使用意願(Willingness)
 		+ 使用者為了規避安全可能會造成系統更不安全，例如：過於簡單的登入密碼
 	+ 企業目標
 	+ 費用(Expenses)

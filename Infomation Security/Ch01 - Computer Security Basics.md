@@ -61,4 +61,26 @@
 + 資安專家所規定的風險分析過程
 
 ## 資產價值 Identifying and Valuing Assets
-+ 資產價值是[權衡](Tradeoffs)[成本](Cost)與[收益](Benefit)的[基礎](Eng://Foundation)
++ 資產價值是權衡(Tradeoffs)成本與收益(Cost & Benefit)的基礎(Foundation)
++ 資產的價值可以用的評估(Valuation)方法：
+	+ **取代價評估法** Replacement Cost Valuation
+		+ 使用取代物的價格作為資產的價格
+	+ **原始價評估法** Original Cost Valuation
+		+ 使用資產當初購入的價格作為資產的價格
+	+ **折舊價評估法** Depreciated Valuation
+		+ 使用取代物與原價的價差作為資產的價格
+	+ **優先度評估法** Qualitative Valuation
+		+ 無論該資產的金錢價值(Dollar Values)為何，優先度(Priorities)高的資產就是比較重要
+
+## 識別與評估風險 Identifying and Assessing Risks
++ 兩種主要的風險評估技術：
+	+ 值 Qualitative
+	+ 量 Quantitative
++ 漏洞 Vulnerability
+	+ 系統**內部**可能(Potentially)被利用(Exploited)的弱點(Weakness)
+	+ 例如：沒有安裝防毒軟體的電腦
++ 威脅 Threat
+	+ 來自**外部**可能利用系統漏洞的情況(Circumstance)
+	+ 例如：網路上存在著電腦病毒
++ 風險 Risk
+	+ 等於**威脅**加上**漏洞**

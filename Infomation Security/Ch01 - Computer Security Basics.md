@@ -149,3 +149,14 @@
 	+ 風險機率
 	+ 選擇措施
 + 資訊安全的關鍵是設定有效率的方針與教育
+
+## 練習題
+
+<span color="white">c</span>
+	1. _____ is a goal of information security that deals with keeping sensitive information from falling into the wrong hands.
+		a) Integrity
+		b) Availability
+		c) Confidentiality
+		d) Denial of service
+
+

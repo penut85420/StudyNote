@@ -47,4 +47,45 @@
 ## 存取控制技術 Access Control Techniques
 + 選擇符合組織需求的技術
 + 也要考慮使用者的接受度
-(TODO: Page 6)
+
+## 存取控制設計 Access Control Designs
++ ### Mandantory Access Control
+	+ 指定安全標籤(Security Label)給每個主體和物件
+	+ 由安全標籤來決定行為是否准許(Granted)
+	+ 常見的應用方式為 **Rule-Based 存取控制**
+		+ Rule-Base 是 Mandantory 的一種實作方式
+		+ 需要知道給主體哪種等級的安全標籤
+		+ 是一種強制的存取控制
+	+ 常見軍方(Military)資料分級(Classifications)
+		+ 未分類 Unclassified
+		+ 敏感但未分類 Sensitive but Unclassified
+		+ 機密 Confidential
+		+ 秘密 Secret
+		+ 最高機密 Top Secret
+	+ 常見商業資料分級
+		+ 公開 Public
+		+ 敏感 Sensitive
+		+ 私人 Private
+		+ 機密 Confidential
++ ### Discretionary Access Control
+	+ 依照物件所有者的喜好決定
+	+ 商業操作上常見的設計
+	+ 基本上比較彈性、易實作
+	+ 基本上比 Mandantory 不安全
+	+ 包含 Identity-Based 存取控制、Access Control Lists(ACLs)
++ ### Non-Discretionary Access Control
+	+ 根據主體的角色與任務決定存取控制權
+		+ 也可稱為 Role-Based, Task-Based Access Control
+	+ Lattice-Based Control 是一種 Non-Discretionary Access Control 的變體(Variation)
+		+ 主體和對象之間具有一組用於定義訪問規則和條件的邊界
+
+## 存取控制的管理 Access Control Administration
++ 主要分為集中式、分散式、混合式
++ ### 集中式 Centralized
+	+ 所有的需求都經過一個權力核心
+	+ 管理政策相對單純
+	+ 因為都經過一個點，所以會有效能瓶頸(Bottlenecks)
++ ### 分散式 Decentralized
+	+ 物件的存取控制不是集中的
+	+ 相對複雜的管理策略
+	+ 效能相對穩定

@@ -62,7 +62,7 @@
 		+ 機密 Confidential
 		+ 秘密 Secret
 		+ 最高機密 Top Secret
-	+ 常見商業資料分級
+	+ 常見商業(Commercial)資料分級
 		+ 公開 Public
 		+ 敏感 Sensitive
 		+ 私人 Private

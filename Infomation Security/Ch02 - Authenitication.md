@@ -89,3 +89,44 @@
 	+ 物件的存取控制不是集中的
 	+ 相對複雜的管理策略
 	+ 效能相對穩定
+
+## 責任 Accountability
++ 系統管理員使用系統審核(Auditing)來監測
+	+ 誰在使用系統 (Who is using the system)
+	+ 在使用系統做什麼 (What users are doing)
++ Logs 訊息很重要，負責追蹤事件
++ 但這個過程會對效能造成影響
+	+ 限制 Logs 的數量大小
+	+ 設定 Logs 啟動的門檻(Clipping Level)
+	+ 紀錄關鍵的事件才能在事後追蹤
+
+## 存取控制模型 Access Control Models
++ ### State Machine Model
+	+ 定義 Object 的狀態和轉換的集合
+	+ Ex: 印表機的休眠、列印中狀態
+	+ #### Bell-LaPadula Model
+		+ 強調機密性(Confidentiality)
+		+ No read up, no write down
+			+ 不可以讀機密性高的文件
+			+ 不可以把高機密內容寫到機密性低的文件
+	+ #### Biba Model
+		+ 強調完整性(Integrity)
+		+ No read down, no write up
+			+ 將軍不去讀小兵寫的策略
+			+ 小兵不能寫將軍的策略
++ ### Clark-Wilson Model
+	+ 不是一種狀態機模型
+	+ 用不同的途徑(Approach)確保完整性
+	+ CDIs: Constrained Data Items 受保護的資料
+	+ UDIs: Unconstrained Data Items 未受保護的資料
+	+ IVPs: Integrity Verification Procedures
+		+ 驗證資料完整性的程序
+	+ TPs: Transaction Procedures
+		+ 任何對資料進行的授權修改行為
+	+ 所有在模型下的資料都是CDIs
+	+ IVPs會確保系統中資料的完整性
+	+ TPs會接收CDIs或UDIs並且製造CDIs
+	+ TPs必須保證所有可能的UDIs都會變成安全的CDIs
++ ### Noninterference Model
+	+ 通常是其他模型額外的補充
+	+ 確保模型彼此不會互相干擾

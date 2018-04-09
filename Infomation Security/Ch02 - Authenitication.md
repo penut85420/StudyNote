@@ -161,5 +161,36 @@
 + 不好的密碼可能單調、重複或單字
 + 好的密碼大小寫混雜、長度足夠
 
-# Attacks on Passwords
-+ 
+# 密碼實驗 Password Experiment
++ **實際的實驗內容參考PPT第28頁**
++ 實驗的過程發現，使用者很難遵從(Compliance)實驗規則
++ 系統指定的密碼可能比較好
++ 使用密碼破解工具(Cracking Tool)測試安全性
++ 定期(Periodic)更換密碼
+
+# 密碼攻擊 Attacks on Password
++ Outsider > Normal User > Administrator
++ 有時可能一個脆弱的密碼就導致整個系統被入侵
+
+# 密碼重試 Password Retry
++ 有些系統可能會在三次嘗試之後鎖定登入
++ 鎖定登入的等待越久，雖然安全性越高，但使用者也越不方便
+
+# 密碼檔案 Password File
++ 把密碼存在一個檔案裡面是不好的主意
++ 加密(Cryptographic)方法：雜湊(Hash)
+	+ 在密碼檔案裡面儲存 y = h(pwd)
+	+ 即便密碼檔案被獲取，攻擊者也不知道密碼是多少
+	+ 但攻擊者可以藉由猜測密碼 x 得到 y = h(x) 來破解密碼
+	+ 所以還是無法降低攻擊者的猜測
++ 若使用字典攻擊
+	+ 攻擊者只要算一次雜湊值就可以猜測所有人的密碼
+	+ 對攻擊者的成本好像反而更低了
++ 更好的加密方法：Hash with Salt
+	+ Salt 是 Admin 選的
+	+ 選擇亂數 s，計算 y = h(pwd, s)
+	+ 在密碼檔案裡面儲存 s 跟 y
+	+ Salt 是公開的
+	+ 驗證密碼非常容易
+	+ 但是攻擊者就不能一次猜全部
+

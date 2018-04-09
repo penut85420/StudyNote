@@ -130,3 +130,36 @@
 + ### Noninterference Model
 	+ 通常是其他模型額外的補充
 	+ 確保模型彼此不會互相干擾
+
+# Who Goes There?
++ Something You Know: 密碼
++ Something You Have: Smartcard
++ Something You Are: 指紋
++ Ex: 信用卡則包含了實體 & 簽名，其中簽名屬於生物特徵
+
+# 密碼的問題 Trouble With Passwords
++ 在實務上有很嚴重的問題
++ 人類無法選擇過於安全的密碼
++ 密碼的優點：
+	+ 成本低，免費
+	+ 方便性，易於修改
+
+# Keys vs Passwords
++ 密鑰
+	+ 長度 64 Bits，也可以理解成 8 Bytes的字串之類的
+	+ 則有 2^64 種組合
+	+ 而且系統隨機挑選密鑰
+	+ 攻擊者必須嘗試至少 2^63 次
++ 密碼
+	+ 長度 8 個字元，有 256 種不同的字元
+	+ 則有 256^8 = 2^64 種組合
+	+ 但使用者並不會隨機挑選
+	+ 攻擊者嘗試次數遠小於 2^63 次
+	+ 使用字典攻擊(Dictionary Attack)
+
+# Good & Bad Passwords
++ 不好的密碼可能單調、重複或單字
++ 好的密碼大小寫混雜、長度足夠
+
+# Attacks on Passwords
++ 

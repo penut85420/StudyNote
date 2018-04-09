@@ -131,20 +131,24 @@
 	+ 通常是其他模型額外的補充
 	+ 確保模型彼此不會互相干擾
 
-# Who Goes There?
+## Who Goes There?
 + Something You Know: 密碼
 + Something You Have: Smartcard
 + Something You Are: 指紋
 + Ex: 信用卡則包含了實體 & 簽名，其中簽名屬於生物特徵
 
-# 密碼的問題 Trouble With Passwords
+## 密碼的問題 Trouble With Passwords
 + 在實務上有很嚴重的問題
 + 人類無法選擇過於安全的密碼
 + 密碼的優點：
 	+ 成本低，免費
 	+ 方便性，易於修改
++ 密碼的缺點：
+	+ 太容易被破解
+	+ 對Bad Guy很有優勢
++ 密碼是資訊安全的底限(Bottom Line)
 
-# Keys vs Passwords
+## Keys vs Passwords
 + 密鑰
 	+ 長度 64 Bits，也可以理解成 8 Bytes的字串之類的
 	+ 則有 2^64 種組合
@@ -157,26 +161,27 @@
 	+ 攻擊者嘗試次數遠小於 2^63 次
 	+ 使用字典攻擊(Dictionary Attack)
 
-# Good & Bad Passwords
+## Good & Bad Passwords
 + 不好的密碼可能單調、重複或單字
 + 好的密碼大小寫混雜、長度足夠
 
-# 密碼實驗 Password Experiment
+## 密碼實驗 Password Experiment
 + **實際的實驗內容參考PPT第28頁**
 + 實驗的過程發現，使用者很難遵從(Compliance)實驗規則
-+ 系統指定的密碼可能比較好
-+ 使用密碼破解工具(Cracking Tool)測試安全性
-+ 定期(Periodic)更換密碼
++ 選擇密碼的建議：
+	+ 系統指定的密碼可能比較好
+	+ 使用密碼破解工具(Cracking Tool)測試安全性
+	+ 定期(Periodic)更換密碼
 
-# 密碼攻擊 Attacks on Password
+## 密碼攻擊 Attacks on Password
 + Outsider > Normal User > Administrator
 + 有時可能一個脆弱的密碼就導致整個系統被入侵
 
-# 密碼重試 Password Retry
+## 密碼重試 Password Retry
 + 有些系統可能會在三次嘗試之後鎖定登入
 + 鎖定登入的等待越久，雖然安全性越高，但使用者也越不方便
 
-# 密碼檔案 Password File
+## 密碼檔案 Password File
 + 把密碼存在一個檔案裡面是不好的主意
 + 加密(Cryptographic)方法：雜湊(Hash)
 	+ 在密碼檔案裡面儲存 y = h(pwd)
@@ -193,4 +198,29 @@
 	+ Salt 是公開的
 	+ 驗證密碼非常容易
 	+ 但是攻擊者就不能一次猜全部
+
+## Password Cracking: Do The Math
++ PPT第35~37頁
+
+## 其他問題 Other Password Issues
++ 太多密碼要記，所以重複使用的密碼太多
++ 社交工程(Social Engineering)
+	+ 釣魚網頁
+	+ 社交詐騙
++ Error Logs 可能含有近似真實密碼的紀錄
++ Bugs、按鍵側錄(Keystroke Logging)、間諜軟體(Spyware)等
+
+## 生物辨識 Something You Are
++ 需要便宜且可靠的辨識裝置
++ 雖然研究很活躍但是普及速度不快
++ ## 理想的生物特徵 Ideal Biometric
+	+ ### 普遍性 Universal
+		+ 大家都有的
+	+ ### 區分性 Distinguishing
+		+ 非常明確的區分
+	+ ### 永久性 Permanent
+		+ 一輩子永遠不會改變
+	+ ### 可蒐集 Collectable
+		+ 方便蒐集的特徵
+	+ 安全，簡易使用等等
 

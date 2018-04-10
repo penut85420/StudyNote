@@ -224,3 +224,46 @@
 		+ 方便蒐集的特徵
 	+ 安全，簡易使用等等
 
+## 生物辨識的模式 Biometric Modes
++ 識別 Identification
+	+ 一對多的比對
+	+ Ex: FBI 的指紋資料庫
++ 認證 Authentication
+	+ 一對一的比對
++ 識別比較難
+
+## 註冊 Enrollment
++ 必須多做幾次，確保準確度
++ 是許多系統難以克服的困難
+
+## 辨識 Recognition
++ 要快速、簡單而且準確
+
+## 合作對象 Cooperative Subjects
++ 有時候對象是不合作的，造成正確率下降
++ 沒有良好的註冊，就沒有良好的辨別率
+
+## 誤差 Biometric Errors
++ Fraud Rate: 把 A 誤認成 B
++ Insult Rate: 認為 A 不是 A
++ 假設更改辨識門檻：
+	+ 如果標準設在 99%，則 Fraud Rate 低，Insult Rate 高
+		+ Ex: 可能因為感冒造成聲音辨識不出來
+	+ 如果標準設在 30%，則 Fraud Rate 高，Insult Rate 低
+		+ Ex: 可能會讓雙胞胎被誤認
++ Equal Error Rate
+	+ 當 Fraud Rate == Insult Rate
+
+## 指紋 Fingerprint Biometric
++ 類型：迴圈(Loop)、中心(Whorls)跟拱橫紋(Arches)
++ 用一些手法強化圖片特徵，例如：加高對比值
+
+## 手掌 Hand Geometry
++ 辨識手掌形狀、指寬、指長
++ 適合認證(Authentication)，但不適合識別(Identification)
++ 優點
+	+ 快，只要1分鐘註冊，5秒鐘識別
+	+ 兩隻手是對稱的
++ 缺點
+	+ 不適用年紀太小或太大的人
+	+ 高 Equal Error Rate

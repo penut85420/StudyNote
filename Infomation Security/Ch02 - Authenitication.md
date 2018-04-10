@@ -49,7 +49,7 @@
 + 也要考慮使用者的接受度
 
 ## 存取控制設計 Access Control Designs
-+ ### Mandantory Access Control
++ ### Mandatory Access Control
 	+ 指定安全標籤(Security Label)給每個主體和物件
 	+ 由安全標籤來決定行為是否准許(Granted)
 	+ 常見的應用方式為 **Rule-Based 存取控制**

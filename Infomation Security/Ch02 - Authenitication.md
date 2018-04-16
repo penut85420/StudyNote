@@ -133,7 +133,7 @@
 
 ## Who Goes There?
 + Something You Know: 密碼
-+ Something You Have: Smartcard
++ Something You Have: Smart Card
 + Something You Are: 指紋
 + Ex: 信用卡則包含了實體 & 簽名，其中簽名屬於生物特徵
 

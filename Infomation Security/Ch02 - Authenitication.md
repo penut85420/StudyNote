@@ -53,7 +53,7 @@
 	+ 指定安全標籤(Security Label)給每個主體和物件
 	+ 由安全標籤來決定行為是否准許(Granted)
 	+ 常見的應用方式為 **Rule-Based 存取控制**
-		+ Rule-Base 是 Mandantory 的一種實作方式
+		+ Rule-Base 是 Mandatory 的一種實作方式
 		+ 需要知道給主體哪種等級的安全標籤
 		+ 是一種強制的存取控制
 	+ 常見軍方(Military)資料分級(Classifications)
@@ -71,7 +71,7 @@
 	+ 依照物件所有者的喜好決定
 	+ 商業操作上常見的設計
 	+ 基本上比較彈性、易實作
-	+ 基本上比 Mandantory 不安全
+	+ 基本上比 Mandatory 不安全
 	+ 包含 Identity-Based 存取控制、Access Control Lists(ACLs)
 + ### Non-Discretionary Access Control
 	+ 根據主體的角色與任務決定存取控制權

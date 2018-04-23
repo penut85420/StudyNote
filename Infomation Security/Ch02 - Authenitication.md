@@ -49,7 +49,7 @@
 + 也要考慮使用者的接受度
 
 ## 存取控制設計 Access Control Designs
-+ ### Mandatory Access Control
++ ### 強制型 Mandatory Access Control
 	+ 指定安全標籤(Security Label)給每個主體和物件
 	+ 由安全標籤來決定行為是否准許(Granted)
 	+ 常見的應用方式為 **Rule-Based 存取控制**
@@ -67,15 +67,16 @@
 		+ 敏感 Sensitive
 		+ 私人 Private
 		+ 機密 Confidential
-+ ### Discretionary Access Control
++ ### 斟酌型 Discretionary Access Control
 	+ 依照物件所有者的喜好決定
 	+ 商業操作上常見的設計
 	+ 基本上比較彈性、易實作
 	+ 基本上比 Mandatory 不安全
 	+ 包含 Identity-Based 存取控制、Access Control Lists(ACLs)
-+ ### Non-Discretionary Access Control
-	+ 根據主體的角色與任務決定存取控制權
++ ### 非斟酌型 Non-Discretionary Access Control
+	+ 根據 Subject 的角色與任務決定存取控制權
 		+ 也可稱為 Role-Based, Task-Based Access Control
+	+ 適用於角色轉換頻繁(High Turnover)的公司
 	+ Lattice-Based Control 是一種 Non-Discretionary Access Control 的變體(Variation)
 		+ 主體和對象之間具有一組用於定義訪問規則和條件的邊界
 
@@ -89,6 +90,7 @@
 	+ 物件的存取控制不是集中的
 	+ 相對複雜的管理策略
 	+ 效能相對穩定
++ ### 混和式 Hybrid
 
 ## 責任 Accountability
 + 系統管理員使用系統審核(Auditing)來監測
@@ -123,10 +125,10 @@
 		+ 驗證資料完整性的程序
 	+ TPs: Transaction Procedures
 		+ 任何對資料進行的授權修改行為
-	+ 所有在模型下的資料都是CDIs
-	+ IVPs會確保系統中資料的完整性
-	+ TPs會接收CDIs或UDIs並且製造CDIs
-	+ TPs必須保證所有可能的UDIs都會變成安全的CDIs
+	+ 所有在模型下的資料都是 CDIs
+	+ IVPs 會確保系統中資料的完整性
+	+ TPs 會接收 CDIs 或 UDIs 並且製造 CDIs
+	+ TPs 必須保證所有可能的 UDIs 都會變成安全的 CDIs
 + ### Noninterference Model
 	+ 通常是其他模型額外的補充
 	+ 確保模型彼此不會互相干擾
@@ -267,3 +269,69 @@
 + 缺點
 	+ 不適用年紀太小或太大的人
 	+ 高 Equal Error Rate
+
+## 視網膜 Iris
+
+## EER 比較 Equal Error Rate Comparison
++ 指紋 5%
++ 手 10^-3
++ 視網膜 10^-6
+	+ 但不容易實現
+
+## Something You Have
++ 擁有的東西
+	+ Ex: 車鑰匙、信用卡
+	+ Ex: 密碼產生器
+
+## 辨識與認證方法 Identification & Authentication Methods
++ 兩步驟驗證 Two-Factor Authentication
++ 手機可以是一種密碼產生器
+
+## Single Sign-On
++ 避免頻繁且多次的登入
++ Kerberos 是其中一種
+	+ 使用對稱加密
+	+ 提供 End-To-End 的安全性
+		+ 傳送過程無法讀取內容
+	+ 使用分佈式環境，但由中央伺服器執行
+	+ 包含數據庫和認證過程
+	+ 弱點包含：
+		+ 單點故障(Single Failure)
+		+ 效能瓶頸
+		+ Session Key 會在客戶端上存在一小段時間，可能被盜用
+
+## File & Data Ownership
++ Data Owner
+	+ 承擔最大的責任，設定資料分級
++ Data Custodian
+	+ 實施安全策略，通常是 IT 部門的成員
++ Data User
+	+ 每天使用資料，要負責遵守安全政策
+
+## 攻擊手法 Related Methods of Attacks
++ 暴力破解 Brute Force Attack
+	+ 嘗試所有可能
++ 字典攻擊 Dictionary Attack
+	+ 嘗試一些可能的組合
++ 詐騙攻擊 Spoofing Attack
+	+ 釣魚網站
+
+## 總結 Summary
++ Access Control Designs
+	+ Mandatory
+	+ Discretionary
+	+ Non-Discretionary
++ Access Control Administration
+	+ Centralized
+	+ Decentralized
+	+ Hybrid
++ Access Control Models
+	+ State Machine Model
+		+ Bell-LaPadula Model - Confidentiality
+		+ Biba Model - Integrity
+	+ Clark-Wilson Model
+	+ Noninterference Model
++ Biometric
+	+ Fingerprint
+	+ Hand Geometry
+	+ Iris

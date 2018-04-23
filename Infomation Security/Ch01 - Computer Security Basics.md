@@ -27,7 +27,7 @@
 
 ## 網路資訊安全 Network Security
 + 原本只需要關注獨立系統的安全
-+ 區域網路(LANS - Local Area Network)與網際網路(Internet)的發展使資訊安全的問題變得更困難
++ 區域網路(LANs - Local Area Network)與網際網路(Internet)的發展使資訊安全的問題變得更困難
 + 注意事項(Considerations)包含：
 	+ 保護 TCP/IP 協定(Protocol)
 	+ 防火牆(Firewalls)

@@ -16,7 +16,7 @@
 + 容易解決 Confused Deputy 的代表(Delegate)問題
 
 ## 混淆的代理者 Confused Deputy
-+ Ex: Compiler本身是Object也是Subject
++ Ex: Compiler 本身是 Object 也是 Subject
 + 雖然 A 不能 Write B，但 A 可以操作 Compiler Write B
 + 使用 ACLs 比較難避免這個問題
 + 使用 C-List 就比較容易預防這個問題
@@ -36,8 +36,8 @@
 
 ## 網路分層結構(參考)
 1. 應用 Application
-2. 傳輸 Transport
-3. 網路 Network
+2. 傳輸 Transport -> (Stateful Packet Filter)
+3. 網路 Network -> (Packet Filter)
 4. 連結 Link
 5. 實體 Physical
 

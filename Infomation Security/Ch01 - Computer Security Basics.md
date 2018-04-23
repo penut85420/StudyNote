@@ -140,23 +140,33 @@
 
 ## 總結
 + CIA Triad - 資訊安全人員的目的
+	+ Confidentiality
+	+ Integrity
+	+ Availability
 + DAD Triad - 試圖逃避(Evade)安全措施的目的
+	+ Disclosure
+	+ Alteration
+	+ Denial
 + 因為網路，安全問題從個人電腦移至保護所有互聯(Interconnected)電腦
-+ 威脅包含：駭客、惡意代碼、內部的惡意
++ Threat
+	+ Hacker
+	+ Malicious Code
+		+ Virus
+		+ Worm
+		+ Backdoor
+		+ Trojan Horse
+	+ Malicious Insider
 + 風險分析決定成本與獲益的權衡
-	+ 資產估價
-	+ 識別風險
-	+ 風險機率
-	+ 選擇措施
+	+ 資產估價 Identifying and Valuing Assets
+		+ Replacement Cost Valuation
+		+ Original Cost Valuation
+		+ Depreciated Valuation
+		+ Qualitative Valuation
+	+ 識別風險 Identifying Risks
+	+ 風險機率 Assessing Risks
+	+ 選擇措施 Managing Risks
+		+ Risk Avoidance - 運作影響最大
+		+ Risk Mitigation
+		+ Risk Transference
+		+ Risk Acceptance - 運作影響最小
 + 資訊安全的關鍵是設定有效率的方針與教育
-
-## 練習題
-
-<span color="white">c</span>
-	1. _____ is a goal of information security that deals with keeping sensitive information from falling into the wrong hands.
-		a) Integrity
-		b) Availability
-		c) Confidentiality
-		d) Denial of service
-
-

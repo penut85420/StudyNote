@@ -7,7 +7,7 @@
 ## 永續經營計畫 Business Continuity
 + 幫助企業在面臨風險時持續往下走
 + 風險(Risk) = 威脅(Threat) x 弱點(Vulnerability)
-+ 使用象限圖做弱點評估
++ 使用象限圖做弱點評估  
 威脅
 2 ↑ 1  
 - - → 弱點  

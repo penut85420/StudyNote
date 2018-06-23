@@ -39,6 +39,4 @@
 
 ## Double Transposition
 + 用二維陣列來打亂原文順序。
-![原文](https://i.imgur.com/LuXi6Ju.png)
-↓
-![密文](https://i.imgur.com/F3FqErn.png)
++ ![原文](https://i.imgur.com/LuXi6Ju.png)→![密文](https://i.imgur.com/F3FqErn.png)

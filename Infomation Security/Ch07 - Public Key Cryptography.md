@@ -99,7 +99,7 @@
 + 沒辦法，即便 Bob 知道金鑰，他也有可能忘記訊息
 + 所以 Bob 知道 Alice 有下過訂單，可是他無法證明
 
-## Non-Repudiationa
+## Non-Repudiation
 + Alice 一樣買了 100 張股票
 + Alice 在訂單上使用私鑰簽名
 + 股價下跌，Alice 又宣稱他沒有下訂單
@@ -108,17 +108,31 @@
 + 但這是建立在 Alice 的私鑰沒有被竊取的情況下
 
 ## 簽名再加密 Vs 加密再簽名
-+ 標記法
++ 標記
 	+ 以 Alice 的私鑰 Sign 訊息 M 
 		+ [M]<sub>Alice</sub>
 	+ 以 Alice 的公鑰 Encrypt 訊息 M
 		+ {M}<sub>Alice</sub>
+	+ {[M]<sub>Alice</sub>} = M
+	+ [{M}<sub>Alice</sub>] = M
++ 
 
-## Public Key Certificate
-
-## Certificate Authority
-
-## PKI, Public Key Infrastructure
+## 公鑰的基礎 Public Key Infrastructure
+### + 公鑰憑證 Public Key Certificate
+	+ 包含使用者的名稱與使用者的金鑰
+	+ 憑證由發行人簽章
+	+ 使用簽章者的公鑰驗證憑證上的簽章
+### + 憑證頒發機構 Certificate Authority
+	+ CA 是第三方信任機構 (TTP, Trusted Third Party)
+	+ 專門發行與簽章憑證的
+	+ 驗證簽章 Verifying Signature 
+		+ 用來驗證私鑰所有者的身份
+		+ 不會用來驗證憑證的來源
+	+ 憑證是公開的
+	+ 如果 CA 出錯將會造成很大的問題
+	+ 常見的憑證格式是 X.509
+### + PKI, Public Key Infrastructure
+	+
 
 ## PKI Trust Model
 

@@ -84,8 +84,30 @@
 + ![Elliptic Curve](https://i.imgur.com/YiAg5ms.png)
 + 如果 P1 跟 P2 都在 E 上，則定義 P3 = P1 + P2
 
-## ECC Diffie-Hellman
-+ 這裡一堆數學，還是留著下輩子慢慢看吧
+## Points on Elliptic Curve
++ 假設 y^2 = x^3 + 2x + 3 (mod 5)
+	+ x = 0 => y^2 = 3 => No Solution (mod 5)
+	+ x = 1 => y^2 = 6 => y = 1, 4 (mod 5)
+	+ x = 2 => y^2 = 15 => y = 0 (mod 5)
+	+ x = 3 => y^2 = 36 => y = 1, 4 (mod 5)
+	+ x = 4 => y^2 = 75 => y = 0 (mod 5)
++ 則 Elliptic Curve 上的點為 
+	+ (1, 1) (1, 4) 
+	+ (2, 0)
+	+ (3, 1) (3, 4)
+	+ (4, 0)
+	+ 在無限大的點為無限大
+
+## Elliptic Curve Math
++ y^2 = x^3 + ax + b (mod p)
+	+ P1 = (x1, y1)
+	+ P2 = (x2, y2)
+	+ P1 + P2 = P3 = (x3, p3)
+		+ x3 = m^2 - x1 - x2 (mod p)
+		+ y3 = m(x1 - x3) - y1 (mod p)
+	+ m = (y2 - y1) * (x2 - x1)^-1 mod p, if P1 ≠ P2
+	+ m = (3x1^2 + a) * (2y1)^-1 mod p, if P1 = P2
+	+ 特殊情況：如果 m 是無限大，P3 = ，而且  + P = P for all P
 
 ## 公鑰系統的使用
 + 資料的傳輸必須經過不安全的頻道。

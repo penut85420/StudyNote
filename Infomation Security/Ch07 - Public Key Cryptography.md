@@ -18,9 +18,9 @@
 + 公鑰是 (N, e)
 + 私鑰是 d
 + 加密訊息 M
-	+ C = M^e mod N
+	+ C = M<sup>e</sup> mod N
 + 解密訊息 C
-	+ M = C^d mod N
+	+ M = C<sup>d</sup> mod N
 + e 跟 N 是公開的
 + 如果攻擊者可以分解 N，他就可以用 e 輕鬆找到 ed = 1 mod (p-1)(q-1)
 + 將 Modulus 分解就可以破解 RSA
@@ -31,7 +31,7 @@
 + 38 = 14 mod 12
 	+ 38 - 12 - 12 = 14
 
-## Simpla RSA Example
+## Simple RSA Example
 + 選擇大質數 p = 11, q = 3
 + N = pq = 33, (p-1)(q-1) = 20
 + e = 3 跟 20 互質
@@ -40,10 +40,10 @@
 + 公鑰：(N, e) = (33, 3)
 + 私鑰：d = 7
 + 假設訊息 M = 8
-+ 密文 C = M^e mod N
-	+ C = 8^3 mod 33 = 17
-+ 解密 M = C^d mod N
-	+ M = 17^7 mod 33 = 8
++ 密文 C = M<sup>e</sup> mod N
+	+ C = 8<sup>3</sup> mod 33 = 17
++ 解密 M = C<sup>d</sup> mod N
+	+ M = 17<sup>7</sup> mod 33 = 8
 
 ## Diffie-Hellman
 + 一種交換金鑰的演算法。

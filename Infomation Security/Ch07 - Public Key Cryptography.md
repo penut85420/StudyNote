@@ -1,4 +1,4 @@
-Chapter 7 - Public Key Cryptography
+# Chapter 7 - Public Key Cryptography
 
 ## Overview
 + 寄件人使用收件人的公鑰加密訊息。
@@ -87,12 +87,32 @@ Chapter 7 - Public Key Cryptography
 ## ECC Diffie-Hellman
 
 ## 公鑰系統的使用
++ 資料的傳輸必須經過不安全的頻道。
++ 保護資料與不安全的媒體。
++ 數位簽章提供完整性與不可否認性。
 
 ## Non-Non-Repudiation
++ Alice 從 Bob 那裡點了 100 張股票
++ Alice 使用對稱金鑰計算 MAC
++ 股票下跌，Alice 卻宣稱她沒有買股票
++ Bob 有辦法證明 Alice 下過訂單嗎?
++ 沒辦法，即便 Bob 知道金鑰，他也有可能忘記訊息
++ 所以 Bob 知道 Alice 有下過訂單，可是他無法證明
 
-## Non-Repudiation
+## Non-Repudiationa
++ Alice 一樣買了 100 張股票
++ Alice 在訂單上使用私鑰簽名
++ 股價下跌，Alice 又宣稱他沒有下訂單
++ 這次 Bob 可以證明 Alice 有下單
++ 因為只有擁有 Alice 私鑰的人可以下單
++ 但這是建立在 Alice 的私鑰沒有被竊取的情況下
 
 ## 簽名再加密 Vs 加密再簽名
++ 標記法
+	+ 以 Alice 的私鑰 Sign 訊息 M 
+		+ [M]<sub>Alice</sub>
+	+ 以 Alice 的公鑰 Encrypt 訊息 M
+		+ {M}<sub>Alice</sub>
 
 ## Public Key Certificate
 

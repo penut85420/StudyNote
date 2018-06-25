@@ -118,11 +118,11 @@
 + 
 
 ## 公鑰的基礎 Public Key Infrastructure
-### + 公鑰憑證 Public Key Certificate
++ ### 公鑰憑證 Public Key Certificate
 	+ 包含使用者的名稱與使用者的金鑰
 	+ 憑證由發行人簽章
 	+ 使用簽章者的公鑰驗證憑證上的簽章
-### + 憑證頒發機構 Certificate Authority
++ ### 憑證頒發機構 Certificate Authority
 	+ CA 是第三方信任機構 (TTP, Trusted Third Party)
 	+ 專門發行與簽章憑證的
 	+ 驗證簽章 Verifying Signature 
@@ -131,7 +131,7 @@
 	+ 憑證是公開的
 	+ 如果 CA 出錯將會造成很大的問題
 	+ 常見的憑證格式是 X.509
-### + PKI, Public Key Infrastructure
++ ### PKI, Public Key Infrastructure
 	+
 
 ## PKI Trust Model

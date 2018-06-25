@@ -100,14 +100,14 @@
 
 ## Elliptic Curve Math
 + y^2 = x^3 + ax + b (mod p)
-	+ P1 = (x1, y1)
-	+ P2 = (x2, y2)
-	+ P1 + P2 = P3 = (x3, p3)
-		+ x3 = m^2 - x1 - x2 (mod p)
-		+ y3 = m(x1 - x3) - y1 (mod p)
-	+ m = (y2 - y1) * (x2 - x1)^-1 mod p, if P1 ≠ P2
-	+ m = (3x1^2 + a) * (2y1)^-1 mod p, if P1 = P2
-	+ 特殊情況：如果 m 是無限大，P3 = ，而且  + P = P for all P
+	+ P<sub>1</sub> = (x<sub>1</sub>, y<sub>1</sub>)
+	+ P<sub>2</sub> = (x<sub>2</sub>, y<sub>2</sub>)
+	+ P<sub>1</sub> + P<sub>2</sub> = P<sub>3</sub> = (x<sub>3</sub>, p<sub>3</sub>)
+		+ x<sub>3</sub> = m^<sub>2</sub> - x<sub>1</sub> - x<sub>2</sub> (mod p)
+		+ y<sub>3</sub> = m(x<sub>1</sub> - x<sub>3</sub>) - y<sub>1</sub> (mod p)
+	+ m = (y<sub>2</sub> - y<sub>1</sub>) * (x<sub>2</sub> - x<sub>1</sub>)<sup>-1</sup> mod p, if P<sub>1</sub> ≠ P<sub>2</sub>
+	+ m = (3x<sub>1</sub><sup>2</sup> + a) * (2y<sub>1</sub>)<sup>-1</sup> mod p, if P<sub>1</sub> = P<sub>2</sub>
+	+ 特殊情況：如果 m 是無限大，P3 = ∞，而且 ∞ + P = P for all P
 
 ## 公鑰系統的使用
 + 資料的傳輸必須經過不安全的頻道。

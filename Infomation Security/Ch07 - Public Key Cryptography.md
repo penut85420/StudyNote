@@ -172,7 +172,7 @@
 	+ 使用公鑰密碼系統建立一把 Key
 	+ 使用對稱式金鑰系統來加密 Data
 	+ 考慮以下狀況：
-		+ Alice ==== {K}<sub>Bob</sub> ===> Bob
+		+ Alice ====    {K}<sub>Bob</sub>    ===> Bob
 		+ Alice <=== E(Bob's Data, K) ==== Bob
 		+ Alice ==== E(Alice's Data, K) ===> Bob
 		+ Bob 有辦法確定他在跟 Alice 說話嗎?

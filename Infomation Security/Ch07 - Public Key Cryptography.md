@@ -9,6 +9,74 @@
 	+ 舉例：
 		+ 給定一個 p 和 q 可以很輕鬆得到 N = p * q。
 		+ 但給定一個 N 卻很難找到 p 跟 q 是誰。
++ 使用 Bob 的公鑰加密的訊息
+	+ 只有 Bob 的私鑰可以還原
++ 數位簽章
+	+ 使用私鑰簽名加密過程
+	+ 任何人都可以使用公鑰解碼來驗證簽章
+	+ 但只有私鑰的持有者可以簽名
+
+## 背包問題
++ 就是子集總和的問題
++ 背包問題是 NP-Complete 問題
++ 一般的背包問題很難解決
+	+ 可以使用 Superincreasing Knapsack 方法
+	+ 從最大的開始往下加
+	+ Ex: Weights (2, 3, 7, 14, 30, 57, 120, 251)
+		+ Target: 186
+		+ Step 1. Get 120, Left 66
+		+ Step 2. Get 57, Left 9
+		+ Step 3. Get 7, Left 2
+		+ Step 4, Get 2, Left 0, Done.
+
+## 背包密碼系統
++ 產生 Superincreasing Knapsack
++ 把 SIK 轉換成 General Knapsack
+	+ 公鑰：GK
+	+ 私鑰：SIK + Conversion Factors
++ Easy to encrypt with GK
++ Easy to decrypt with SIK
+
+## 背包密碼系統範例
++ SIK: (2, 3, 7, 14, 30, 57, 120, 251)
++ 選擇 m = 41 和 n = 491
++ n 是一個大於總和的數字
++ 產生 General Knapsack
+	+ 2 * 41 mod 491 = 82
+	+ 3 * 41 mod 491 = 123
+	+ 7 * 41 mod 491 = 287
+	+ 14 * 41 mod 491 = 83
+	+ 30 * 41 mod 491 = 248
+	+ 57 * 41 mod 491 = 373
+	+ 120 * 41 mod 491 = 10
+	+ 251 * 41 mod 491 = 471 
+	+ GK: (82, 123, 287, 83, 248, 373, 10, 471)
++ 私鑰
+	+ (2, 3, 7, 14, 30, 57, 120, 251)
+	+ m<sup>-1</sup> mod n = 41<sup>-1</sup> mod 491 = 12
++ 公鑰
+	+ (82, 123, 287, 83, 248, 373, 10, 471)
+	+ n = 491
++ 加密訊息 10010110
+	+ 第 1, 4, 6, 7 個 Bit 為 1
+	+ 82 + 83 + 373 + 10 = 548
++ 解密
+	+ 548 * 12 = 193 mod 491
+	+ S = 193, 求 SIK
+	+ Get 120, Left 73
+	+ Get 57, Left 16
+	+ Get 14, Left 2
+	+ Get 2, Left 0, Done.
+	+ (2, 14, 5, 7) 為 SIK 的第 1, 4, 6, 7 個元素
+	+ 獲得原文 10010110
+
+## 背包密碼系統的弱點
++ Trapdoor
+	+ SIK 轉換至 GK 使用 Modular Arithmetic
++ One-Way
+	+ GK 很容易加密原文，但很難解開密文
+	+ SIK 很容易解開密文
++ 但 1983 被 Apple II 電腦使用 Lattice Reduction 破解
 
 ## RSA
 + p 跟 q 是兩個很大的質數
@@ -24,6 +92,14 @@
 + e 跟 N 是公開的
 + 如果攻擊者可以分解 N，他就可以用 e 輕鬆找到 ed = 1 mod (p-1)(q-1)
 + 將 Modulus 分解就可以破解 RSA
+
+## RSA Work
++ Euler's Theorem 
+	+ 歐拉定理也稱為費馬-歐拉定理
+	+ x 若是與 n 互質，則 x<sup>φ(n)</sup> = 1 mod n
++ 歐拉函式φ
+	+ φ(n) 是小於或等於 n 的正整數中與 n 互質的數的數量。
+	+ φ(8) = 4，因為 1, 3, 5, 7 與 8 互質。
 
 ## Mod
 + a = b mod n

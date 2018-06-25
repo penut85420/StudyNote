@@ -50,24 +50,24 @@
 	+ 用來建立一個對稱式金鑰。
 + 不是用來加密或簽名的。
 + 安全性依賴在離散問題上。
-	+ 給定 g, p, g^k mod p, 找到 k
+	+ 給定 g, p, g<sup>k</sup> mod p, 找到 k
 + 讓 p 是質數，g 是產生器，這兩個數是公開的
-+ 在 x 屬於 {1, 2, ..., p-1} 存在一個 n 使得 x = g^n mod p
++ 在 x 屬於 {1, 2, ..., p-1} 存在一個 n 使得 x = g<sup>n</sup> mod p
 + Alice 選擇 Secret Value a
 + Bob 選擇 Secret Value b
-+ Alice 送出 g^a mod p 給 Bob
-+ Bob 送出 g^b mod p 給 Alice
-+ 兩人皆計算分享的 g^ab mod p
-+ g^ab mod p 可以做為對稱式金鑰來用
-+ 假設 Trudy 可以看見 g^a mod p 和 g^b mod p
-+ 註記：g^a * g^b mod p = g^(a+b) mod p ≠ g^ab mod p
++ Alice 送出 g<sup>a</sup> mod p 給 Bob
++ Bob 送出 g<sup>b</sup> mod p 給 Alice
++ 兩人皆計算分享的 g<sup>ab</sup> mod p
++ g<sup>ab</sup> mod p 可以做為對稱式金鑰來用
++ 假設 Trudy 可以看見 g<sup>a</sup> mod p 和 g<sup>b</sup> mod p
++ 註記：g<sup>a</sup> * g<sup>b</sup> mod p = g<sup>(a+b)</sup> mod p ≠ g<sup>ab</sup> mod p
 + 如果 Trudy 知道 a 或 b，則系統被破解
 + 如果 Trudy 可以解開離散問題，則他可以找到 a 或 b
 + MiM, Man-In-The-Middle Attack
-	+ (Alice, a) > g^a mod p > (Trudy, t) > g^t mod p > (Bob, b)
-	+ (Alice, a) < g^t mod p < (Trudy, t) < g^b mod p < (Bob, b)
-	+ Trudy 分享 g^at mod p 給 Alice
-	+ Trudy 分享 g^bt mod p 給 Bob
+	+ (Alice, a) > g<sup>a</sup> mod p > (Trudy, t) > g<sup>t</sup> mod p > (Bob, b)
+	+ (Alice, a) < g<sup>t</sup> mod p < (Trudy, t) < g<sup>b</sup> mod p < (Bob, b)
+	+ Trudy 分享 g<sup>at</sup> mod p 給 Alice
+	+ Trudy 分享 g<sup>bt</sup> mod p 給 Bob
 	+ 這個過程中，Alice 跟 Bob 都不知道 Trudy 的存在
 	+ 如何預防？
 		+ 使用對稱金鑰加密 DH Exchange
@@ -79,18 +79,18 @@
 + 可能會更有效率
 	+ 一樣的安全性，需要比較少的 Bits
 	+ 但是操作更加複雜
-+ 圖形 E 代表方程式 y^2 = x^3 + ax + b
++ 圖形 E 代表方程式 y<sup>2</sup> = x<sup>3</sup> + ax + b
 + 同時也包含在無限大的點
 + ![Elliptic Curve](https://i.imgur.com/YiAg5ms.png)
 + 如果 P1 跟 P2 都在 E 上，則定義 P3 = P1 + P2
 
 ## Points on Elliptic Curve
-+ 假設 y^2 = x^3 + 2x + 3 (mod 5)
-	+ x = 0 => y^2 = 3 => No Solution (mod 5)
-	+ x = 1 => y^2 = 6 => y = 1, 4 (mod 5)
-	+ x = 2 => y^2 = 15 => y = 0 (mod 5)
-	+ x = 3 => y^2 = 36 => y = 1, 4 (mod 5)
-	+ x = 4 => y^2 = 75 => y = 0 (mod 5)
++ 假設 y<sup>2</sup> = x<sup>3</sup> + 2x + 3 (mod 5)
+	+ x = 0 => y<sup>2</sup> = 3 => No Solution (mod 5)
+	+ x = 1 => y<sup>2</sup> = 6 => y = 1, 4 (mod 5)
+	+ x = 2 => y<sup>2</sup> = 15 => y = 0 (mod 5)
+	+ x = 3 => y<sup>2</sup> = 36 => y = 1, 4 (mod 5)
+	+ x = 4 => y<sup>2</sup> = 75 => y = 0 (mod 5)
 + 則 Elliptic Curve 上的點為 
 	+ (1, 1) (1, 4) 
 	+ (2, 0)
@@ -99,15 +99,15 @@
 	+ 在無限大的點為無限大
 
 ## Elliptic Curve Math
-+ y^2 = x^3 + ax + b (mod p)
++ y<sup>2</sup> = x<sup>3</sup> + ax + b (mod p)
 	+ P<sub>1</sub> = (x<sub>1</sub>, y<sub>1</sub>)
 	+ P<sub>2</sub> = (x<sub>2</sub>, y<sub>2</sub>)
 	+ P<sub>1</sub> + P<sub>2</sub> = P<sub>3</sub> = (x<sub>3</sub>, p<sub>3</sub>)
-		+ x<sub>3</sub> = m^<sub>2</sub> - x<sub>1</sub> - x<sub>2</sub> (mod p)
+		+ x<sub>3</sub> = m<sup>2</sup> - x<sub>1</sub> - x<sub>2</sub> (mod p)
 		+ y<sub>3</sub> = m(x<sub>1</sub> - x<sub>3</sub>) - y<sub>1</sub> (mod p)
 	+ m = (y<sub>2</sub> - y<sub>1</sub>) * (x<sub>2</sub> - x<sub>1</sub>)<sup>-1</sup> mod p, if P<sub>1</sub> ≠ P<sub>2</sub>
 	+ m = (3x<sub>1</sub><sup>2</sup> + a) * (2y<sub>1</sub>)<sup>-1</sup> mod p, if P<sub>1</sub> = P<sub>2</sub>
-	+ 特殊情況：如果 m 是無限大，P3 = ∞，而且 ∞ + P = P for all P
+	+ 特殊情況：如果 m 是無限大，P<sub>3</sub> = ∞，而且 ∞ + P = P for all P
 
 ## 公鑰系統的使用
 + 資料的傳輸必須經過不安全的頻道。

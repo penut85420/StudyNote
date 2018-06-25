@@ -85,6 +85,7 @@
 + 如果 P1 跟 P2 都在 E 上，則定義 P3 = P1 + P2
 
 ## ECC Diffie-Hellman
++ 這裡一堆數學，還是留著下輩子慢慢看吧
 
 ## 公鑰系統的使用
 + 資料的傳輸必須經過不安全的頻道。
@@ -115,7 +116,7 @@
 		+ {M}<sub>Alice</sub>
 	+ {[M]<sub>Alice</sub>} = M
 	+ [{M}<sub>Alice</sub>] = M
-+ 
++ 下面的圖解 Bob 各種誤會，我也看不懂
 
 ## 公鑰的基礎 Public Key Infrastructure
 + ### 公鑰憑證 Public Key Certificate
@@ -132,10 +133,46 @@
 	+ 如果 CA 出錯將會造成很大的問題
 	+ 常見的憑證格式是 X.509
 + ### PKI, Public Key Infrastructure
-	+
-
-## PKI Trust Model
+	+ PKI 包含了所有的部分：
+		+ 金鑰的產生與管理
+		+ 憑證頒發機構
+		+ 憑證的終止...等
+	+ PKI 並沒有一般的標準
+	+ 我們考慮使用一些信任模型(Trust Models)
+		+ 壟斷模型 Monopoly Model
+			+ 一個大家都信任的組織來擔任 CA
+			+ 主要是 VeriSign 在使用
+			+ 但若 CA 受到威脅，將會出問題
+			+ 如果你不信任 CA 也是個大問題
+		+ 寡頭政治模型 Oligarchy Model
+			+ 有多個可信任的 CA
+			+ 現在瀏覽器使用這個方法
+			+ 可能有超過 80 個憑證，只為了驗證簽章
+			+ 使用者可以決定哪個 CA 可信任
+		+ 無政府模型 Anarchy Model
+			+ 所有人都是 CA
+			+ 使用者必須決定哪個 CAs 可信任
+			+ PGP 使用這個方法
+		+ 還有很多種其他的模型
 
 ## 真實世界的機密性
 + 對稱金鑰 VS 公開金鑰
-+ 
+	+ 對稱金鑰
+		+ 速度快
+		+ 不需要 PKI
+	+ 公開金鑰
+		+ 簽章 - 不可否認性
+		+ 沒有共享的秘密
++ 對稱金鑰的標記
+	+ 使用對稱金鑰 K 加密文本 P
+		+ C = E(P, K)
+	+ 使用對稱金鑰 K 解密密文 C
+		+ P = D(C, K)
++ 混合式的密碼系統
+	+ 使用公鑰密碼系統建立一把 Key
+	+ 使用對稱式金鑰系統來加密 Data
+	+ 考慮以下狀況：
+		+ --- {K}<sub>Bob</sub> --->
+		+ <--- E(Bob's Data, K) ---
+		+ --- E(Alice's Data, K) --->
+		+ Bob 有辦法確定他在跟 Alice 說話嗎?

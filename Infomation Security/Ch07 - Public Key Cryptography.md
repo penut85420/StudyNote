@@ -109,6 +109,34 @@
 	+ m = (3x<sub>1</sub><sup>2</sup> + a) * (2y<sub>1</sub>)<sup>-1</sup> mod p, if P<sub>1</sub> = P<sub>2</sub>
 	+ 特殊情況：如果 m 是無限大，P<sub>3</sub> = ∞，而且 ∞ + P = P for all P
 
+## Elliptic Curve Addition
++ 假設 y<sup>2</sup> = x<sup>3</sup> + 2x + 3 (mod 5)
++ 在 Curve 上的點為 (1, 1) (1, 4) (2, 0) (3, 1) (3, 4) (4, 0) 和 ∞
++ (1, 4) + (3, 1) = P<sub>3</sub> = (x<sub>3</sub>, y<sub>3</sub>) 是多少?
+	+ m = (1-4) * (3-1)<sup>-1</sup> = -3 * 2<sup>-1</sup>
+	+ m = 2 * 3 = 6 = 1 (mod 5)
+	+ x<sub>3</sub> = 1 - 1 - 3 = 2 (mod 5)
+	+ y<sub>3</sub> = 1 * (1-2) - 4 = 0 (mod 5)
+	+ 所以 (1, 4) + (3, 1) = (2, 0)
+
+## ECC Diffie-Hellman
++ 公開：Elliptic Curve 和 Curve 上的點 (x, y)
++ 私有：Alice 的 A 和 Bob 的 B
+	+ Alice > A(x, y) > Bob
+	+ Alice < B(x, y) < Bob
++ Alice 計算 A(B(x, y))
++ Bob 計算 B(A(x, y))
++ 這些都是一樣的，因為 AB = BA
+
+## ECC DH 範例
++ Public: y<sup>2</sup> = x<sup>3</sup> + 7x + b (mod 37)
++ Alice's Secret: A = 4
++ Bob's Secret: B = 7
++ Alice 傳給 Bob: 4(2, 5) = (7, 32)
++ Bob 傳給 Alice: 7(2, 5) = (18, 35)
++ Alice 計算 4(18, 35) = (22, 1)
++ Bob 計算 7(7, 32) = (22, 1)
+
 ## 公鑰系統的使用
 + 資料的傳輸必須經過不安全的頻道。
 + 保護資料與不安全的媒體。

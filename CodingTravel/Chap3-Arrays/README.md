@@ -15,6 +15,22 @@
 |---|---|
 | 1<br>3<br>5<br>7<br>9<br>2<br>4<br>6<br>8<br>10 | 1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10 |
 
+## Random & Array
++ Roll dices.
+
+| Example                 |
+|-------------------------|
+| ` 2 occurs   284 times` |
+| ` 3 occurs   565 times` |
+| ` 4 occurs   839 times` |
+| ` 5 occurs  1199 times` |
+| ` 6 occurs  1332 times` |
+| ` 7 occurs  1671 times` |
+| ` 8 occurs  1369 times` |
+| ` 9 occurs  1117 times` |
+| `10 occurs   816 times` |
+| `11 occurs   559 times` |
+| `12 occurs   249 times` |
 
 ## Astrology
 + Datasets

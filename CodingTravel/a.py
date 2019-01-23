@@ -16,3 +16,7 @@ with open('a', 'r', encoding='UTF=8') as fin:
 	r += '| %s | %s |\n' % ('<br>'.join(aa), '<br>'.join(bb))
 p = Popen(['xsel','-bi'], stdin=PIPE)
 p.communicate(input=r.encode('UTF-8'))
+
+# with open('a', 'r', encoding='UTF=8') as fin:
+# 	for line in fin:
+# 		print(line.strip() + '\t', end='')

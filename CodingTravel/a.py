@@ -20,3 +20,8 @@ p.communicate(input=r.encode('UTF-8'))
 # with open('a', 'r', encoding='UTF=8') as fin:
 # 	for line in fin:
 # 		print(line.strip() + '\t', end='')
+
+# a = '1 3 5 7 9 2 4 6 8 10'
+# b = [int(aa) for aa in a.split(' ')]
+# print('\n'.join(a.split(' ')))
+# print('\n'.join([str(s) for s in sorted(b)]))
